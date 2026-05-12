@@ -16,7 +16,7 @@
     "NVIDIA_DRIVER_CAPABILITIES": "compute,utility"
   },
 
-  "remoteUser": "root",
+  "remoteUser": "ubuntu",
 
   "customizations": {
     "vscode": {
