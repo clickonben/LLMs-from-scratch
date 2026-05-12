@@ -1,0 +1,28 @@
+{
+  "name": "CUDA Dev Container",
+  "build": {
+    "dockerfile": "Dockerfile"
+  },
+
+  // ✅ This is the critical part — maps to --runtime=nvidia --gpus all
+  "runArgs": [
+    "--runtime=nvidia",
+    "--gpus", "all"
+  ],
+
+  // Pass NVIDIA env vars into the container
+  "containerEnv": {
+    "NVIDIA_VISIBLE_DEVICES": "all",
+    "NVIDIA_DRIVER_CAPABILITIES": "compute,utility"
+  },
+
+  "remoteUser": "root",
+
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "ms-python.python"
+      ]
+    }
+  }
+}
